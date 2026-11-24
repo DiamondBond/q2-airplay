@@ -69,8 +69,13 @@ Videos have their own players, which this doesn't reach.
 
 This needs Go 1.22 or later, plus what `build-cliairplay.sh` lists (clang, lld, git, curl, unsquashfs,
 python3). cliairplay links against the Q2's own glibc, libstdc++ and libcrypto, taken from Shanling's
-firmware ZIP, which isn't public. So releases are built locally and published by
-`contrib/shanlingq2/release.sh`.
+firmware ZIP, which isn't public. So releases are built and published locally, never by GitHub
+Actions: raise `cmd/q2-airplay/main.go`'s version, commit and push `main`, then
+
+    contrib/shanlingq2/release.sh 'Q2 Firmware V1.32.zip'
+
+builds the committed tree and publishes its zip with `gh` (signed in, with write access to the repo) as
+the release's only asset, under the version's tag. Q2 Pod's App Store reads only a new tag as an update.
 
 Tests: `go test ./...` and `python3 contrib/shanlingq2/test_launcher.py`. `TestEngine` runs the casting
 engine against a simulated player filter and a stand-in cliairplay.
