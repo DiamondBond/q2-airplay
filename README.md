@@ -4,13 +4,15 @@ AirPlay for [Q2 Pod](https://github.com/DiamondBond/q2-pod) on the Shanling Q2: 
 AirPlay speaker on the same Wi-Fi. That includes Sonos, HomePod, Apple TV and AirPort Express, and other
 AirPlay 1 and 2 speakers.
 
-It needs a Q2 Pod build with AirPlay: the Now Playing button, the audio tap in the player, and the
-lyrics and volume handling. For now those are only in group-a-study/q2-pod's test builds.
+It needs Q2 Pod 1.8.1 or later: the audio tap in the player, the lyrics and volume handling, and the
+AirPlay row on Now Playing's ⋯ page. It runs as root (`root=1` in its `q2app`; Q2 Pod 1.9.1 and later
+run other card apps without it): PTP timing listens on UDP ports 319 and 320, and the app and
+cliairplay run at the player's priority.
 
 ## Use
 
-1. Install it from **System settings → Apps → AirPlay**.
-2. On **Now Playing**, tap the AirPlay button left of shuffle, or pick **AirPlay** on the ⋯ page.
+1. Install it from **Library → App Store → AirPlay**.
+2. On **Now Playing**, open the ⋯ page and pick **AirPlay**.
 3. Pick a speaker. The Q2 goes quiet, and about a second later the speaker plays what the Q2 plays.
 4. To play on the Q2 again, pick **This Q2**.
 

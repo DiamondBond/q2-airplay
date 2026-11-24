@@ -30,7 +30,7 @@ cp "$HERE/q2app" "$R/"
 cp "$ROOT/LICENSE" "$R/"
 {
     echo "cliairplay (GPL-3.0) is built by contrib/shanlingq2/build-cliairplay.sh of"
-    echo "https://github.com/group-a-study/q2-airplay at $(git -C "$ROOT" rev-parse -q --verify HEAD || echo "$SHA"),"
+    echo "https://github.com/DiamondBond/q2-airplay at $(git -C "$ROOT" rev-parse -q --verify HEAD || echo "$SHA"),"
     echo "from these sources (repository, commit):"
     sed -n 's/^checkout [^ ]* \([^ ]*\) \([0-9a-f]*\)$/  \1 \2/p' "$HERE/build-cliairplay.sh"
 } > "$R/SOURCES"

@@ -25,9 +25,9 @@ echo "$src" > "$r/SOURCE"
 echo "$tag" > "$r/TAG"
 {
     echo "AirPlay for Q2 Pod: what the Q2 plays, on an AirPlay speaker (Sonos, HomePod, Apple TV, AirPlay 1"
-    echo "speakers), chosen from Now Playing's AirPlay button. Needs a Q2 Pod build with AirPlay. See README.md."
+    echo "speakers), chosen on Now Playing's ⋯ page. Needs a Q2 Pod build with AirPlay. See README.md."
     echo
-    echo "Install: **System settings → Apps → AirPlay**, or unzip to the card's root with the Q2 off."
+    echo "Install: **Library → App Store → AirPlay**, or unzip to the card's root with the Q2 off."
     echo
     echo "Built from $src. cliairplay's sources: .airplay/SOURCES in the zip."
     echo
@@ -63,4 +63,4 @@ git -C "$r" add -A -f
 git -C "$r" -c user.name="$(git config user.name)" -c user.email="$(git config user.email)" \
     commit -q -m "Release $tag from $src"
 git -C "$r" push -q "$(git remote get-url origin)" "release/$tag"
-echo "Pushed release/$tag; in a minute or two it's https://github.com/group-a-study/q2-airplay/releases/tag/$tag"
+echo "Pushed release/$tag; in a minute or two it's https://github.com/DiamondBond/q2-airplay/releases/tag/$tag"

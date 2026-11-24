@@ -26,7 +26,7 @@ import (
 	"github.com/group-a-study/q2-airplay/internal/q2spot"
 )
 
-const version = "q2-v1.6"
+const version = "q2-v1.7"
 
 const appNice, senderNice = -5, -8 // the app's and cliairplay's (its PTP and sends keep time)
 
